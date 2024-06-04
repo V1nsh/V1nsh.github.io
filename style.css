@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap");
+
+/* Algemeen en eerste pagina*/
+
+:root {
+  --bg-color: #fff;
+  --main-color: #6c00f0;
+  --text-color: #000000;
+  --second-bg-color: #c9c9c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  padding: 30px 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+nav .logo,
+nav .logo_2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .logo img,
+nav .logo_2 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav .logo a {
+  font-size: 20px;
+  color: #6c00f0;
+  font-weight: bold;
+}
+
+nav .logo_2 a {
+  font-size: 20px;
+  color: #ec5c19;
+  font-weight: bold;
+}
+
+nav .nav-links,
+nav .nav-links2 {
+  display: flex;
+  gap: 20px;
+  font-size: large;
+}
+
+nav .nav-links a,
+nav .nav-links2 a {
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.selected {
+  color: #6c00f0;
+}
+
+nav .nav-links2 a:hover,
+nav .nav-links2 a.selected {
+  color: #ec5c19;
+}
+
+footer {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .socials,
+footer .socials_sanmax {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+footer .socials i,
+footer .socials_sanmax i {
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+footer .socials i:hover {
+  color: #303f9f;
+}
+
+footer .socials_sanmax i:hover {
+  color: #ec5c19;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+.main {
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 230px;
+  height: calc(100vh - 100px);
+}
+
+.main .info h1 {
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+
+.main .info p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.main .info button {
+  padding: 15px 35px;
+  background: #6c00f0;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 25px;
+}
+
+.main .info button:hover {
+  background: #430a89;
+}
+
+.main img {
+  width: 450px;
+  height: 450px;
+  border-radius: 140px;
+}
+
+.typing-tekst {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-tekst span {
+  position: relative;
+}
+
+.typing-tekst span::before {
+  content: "laatstejaar student";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+
+.typing-tekst span::after {
+  content: "";
+  background: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid var(--bg-color);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Informatica freak";
+  }
+  21%,
+  40% {
+    content: "Uhasselt student";
+  }
+  41%,
+  60% {
+    content: "Basketballer";
+  }
+  61%,
+  80% {
+    content: "Autoliefhebber";
+  }
+  81%,
+  100% {
+    content: "leergierig persoon";
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+.about {
+  padding: 60px 100px;
+  background-color: #deebee;
+}
+
+.about .titelabout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.about .titelabout a {
+  color: #303f9f;
+}
+
+.about .titelabout h4,
+.hobby h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.hobby {
+  padding: 100px 100px;
+}
+
+.hobby h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.hobby {
+  background: var(--bg-color);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.box {
+  background-color: var(--main-color);
+  height: 280px;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.box:hover {
+  background: transparent;
+  color: var(--text-color);
+  transform: scale(1.03);
+  border: 2px solid var(--main-color);
+}
+
+.box .info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-height: 200px;
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.info h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-height: 90px;
+  margin: auto;
+  text-align: left;
+}
+
+/* Sanmax */
+
+.main-sanmax {
+  background-color: #deebee;
+  padding: 190px 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-sanmax .links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.main-sanmax .links h5 {
+  font-weight: bolder;
+  font-size: 40px;
+  color: #ec5c19;
+}
+
+.main-sanmax .links p {
+  margin-top: 20px;
+  font-weight: 500;
+  margin-right: 230px;
+}
+
+.main-sanmax .links button {
+  margin-top: 40px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ec5c19;
+  padding: 14px 24px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+}
+
+.main-sanmax .rechts img {
+  width: 500px;
+}
+
+.skills {
+  padding: 110px 85px 0;
+  margin-bottom: 200px;
+}
+
+.skills h3 {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.skills .skills-items {
+  display: flex;
+  margin-top: 70px;
+  gap: 30px;
+}
+
+.skills .skills-items .items {
+  background-color: #deebee;
+  width: 25%;
+  border-radius: 10px;
+  padding: 32px;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills .skills-items .items:hover {
+  border-bottom: 5px solid #ec5c19;
+}
+
+.skills .skills-items .items .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.skills .skills-items .items .icons i {
+  font-size: 26px;
+  color: #ec5c19;
+}
+
+.skills .skills-items .items h4 {
+  font-size: 18px;
+}
+
+.skills .skill-items .items {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #ec5c19;
+}
+
+.sanmax-content {
+  margin: 120px 0;
+  background-color: #deebee;
+  padding: 55px 0;
+}
+
+.aboutsanmax {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.aboutsanmax .left {
+  background-color: #ec5c19;
+  border-radius: 10px 10px 0 0;
+}
+
+.aboutsanmax .left img {
+  width: 450px;
+  height: 350px;
+}
+
+.aboutsanmax .right {
+  background-color: #b3cfd6;
+  padding: 50px;
+  height: 350px;
+}
+
+.aboutsanmax .right p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.locatie {
+  margin: 140px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.locatie .maps {
+  margin-top: 60px;
+}
+
+
+/* VERSLAG */
+
+.page-title {
+  padding: 80px 450px 20px;
+  width: 100%;
+}
+
+.content {
+  padding: 30px 100px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content > p {
+  width: 970px;
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.content > img {
+  width: 970px;
+  margin: 30px 0;
+  border-radius: 20px;
+}
+
+.content > h1,
+.content > h2,
+.content > h3 {
+  width: 970px;
+}
+
+.content .verslag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content .verslag-list .verslag-item {
+  background-color: #dbedf2;
+  padding: 24px;
+  width: 960px;
+  border-radius: 10px;
+}
+
+.content .verslag-list .verslag-item .info {
+  margin-bottom: 20px;
+}
+
+.content .verslag-list .verslag-item p {
+  margin: 0px;
+  font-weight: 400;
+}
+
+/*Zelfreflectie EN about */
+
+.content .container {
+  background-color: #dbedf2;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 970px;
+  border-radius: 20px;
+}
+
+.content .container img {
+  height: 500px;
+  border-radius: 20px;
+}
+
+.content .container h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.content .container .about h1 {
+  margin-bottom: 20px;
+}
+
+.content .container .about > p {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.content .container .about .email {
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .main .info .typing-tekst{
+      font-size: 40px;
+  }
+  .main .info p{
+    font-size: 18px;
+  }
+  .main .info button {
+    margin-top: 90px;
+  }
+  .main img {
+    width: 430px;
+    height: 430px;
+  }
+  .box {
+    height: 300px;
+  }
+  .box .info p {
+    font-size: 16px;
+  }
+  .page-title {
+    padding: 80px 280px 20px;
+    width: 100%;
+  }
+  .content .verslag-list {
+    gap: 30px;
+  }
+}
